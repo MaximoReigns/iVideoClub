@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Autor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-title size="large">Autor</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Autor</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Aplicación desarrollada por Máximo Sánchez.<br>
+      A continuación puede consultar más información
+      sobre el autor.
+    </ion-card-content>
+    <ion-button expand="full" color="light" (click)="curriculum()">Currículum Vitae</ion-button>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-label>
+          <h2>Correo</h2>
+          <a href="mailto:email@email.com">email@email.com</a>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="logo-twitter" slot="start"></ion-icon>
+        <ion-label>
+          <h2>Twitter</h2>
+          <a href="https://twitter.com/">@twitter</a>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call" slot="start"></ion-icon>
+        <ion-label>
+          <h2>Teléfono</h2>
+          <a href="tel:999888777">999888777</a>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  

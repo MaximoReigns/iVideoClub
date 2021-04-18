@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="action-card" *ngFor="let movie of movies">
+    <img class="header-img" src="{{movie.poster}}">
+    <ion-card-header>
+      <ion-card-title>{{ movie.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Director: </strong>{{ movie.director}}</p>
+      <p><strong>Año: </strong>{{ movie.anio}}</p>
+      <p><strong>Sipnosis: </strong>{{ movie.sipnosis }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

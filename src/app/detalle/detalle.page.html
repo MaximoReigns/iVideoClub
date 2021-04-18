@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class="action-card" *ngFor="let movie of movies">
+    <img class="header-img" src="{{movie.poster}}">
+    <ion-card-header>
+      <ion-card-title>{{ movie.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Director: </strong>{{ movie.director}}</p>
+      <p><strong>Año: </strong>{{ movie.anio}}</p>
+      <p><strong>Sipnosis: </strong>{{ movie.sipnosis }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+

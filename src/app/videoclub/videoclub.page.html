@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-icon slot="icon-only" name="md-apps"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>iVideoClub</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary" (click)="cambiarVista()">
+      <ion-title size="large">iVideoClub</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-item button *ngFor="let movie of movies" (click)="abrirModal()">
+    <ion-thumbnail slot="start">
+      <img src="{{ movie.poster }}">
+    </ion-thumbnail>
+    <ion-label>
+      <h3>{{ movie.title }}</h3>
+      <p><strong>Director: </strong>{{ movie.director }}</p>
+      <p><strong>Año: </strong>{{ movie.anio }}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
+
+  <!--<ion-item>
+    <ion-thumbnail slot="start">
+      <img src="../../assets/The-Godfather-Part-II.jpg">
+    </ion-thumbnail>
+    <ion-label>
+      <h3>El Padrino (Parte ll)</h3>
+      <p><strong>Director: </strong>Francis Ford Coppola</p>
+      <p><strong>Año: </strong>1974</p>
+    </ion-label>
+    <button> > </button>
+  </ion-item>
+
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <img src="../../assets/Schindlers-List.jpg">
+    </ion-thumbnail>
+    <ion-label>
+      <h3>La lista de Schindler</h3>
+      <p><strong>Director: </strong>Steven Spielberg</p>
+      <p><strong>Año: </strong>1993</p>
+    </ion-label>
+    <button> > </button>
+  </ion-item>
+
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <img src="../../assets/Pulp-Fiction.jpg">
+    </ion-thumbnail>
+    <ion-label (click)="verDetalles(1)">
+      <h3>Pulp Fiction</h3>
+      <p><strong>Director: </strong>Quentin Tarantino</p>
+      <p><strong>Año: </strong>1994</p>
+    </ion-label>
+    <button> > </button>
+  </ion-item>
+
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <img src="../../assets/Cadena-Perpetua.jpg">
+    </ion-thumbnail>
+    <ion-label>
+      <h3>Cadena Perpetua</h3>
+      <p><strong>Director: </strong>Frank Darabont</p>
+      <p><strong>Año: </strong>1994</p>
+    </ion-label>
+    <button> > </button>
+  </ion-item> -->
